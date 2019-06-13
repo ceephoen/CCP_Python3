@@ -106,27 +106,27 @@ class CCP(object):
         :return: None
         """
         if self.svr_ip == '':
-            print('172004  IP为空')
+            logging.fatal('172004  IP为空')
 
         if self.svr_port <= 0:
-            print('172005  端口错误（小于等于0）')
+            logging.fatal('172005  端口错误（小于等于0）')
 
         if self.version == '':
-            print('172013  版本号为空')
+            logging.fatal('172013  版本号为空')
 
         if self.acc_sid == '':
-            print('172006  主帐号为空')
+            logging.fatal('172006  主帐号为空')
 
         if self.acc_token == '':
-            print('172007  主帐号令牌为空')
+            logging.fatal('172007  主帐号令牌为空')
 
         if self.app_id == '':
-            print('172012  应用ID为空')
+            logging.fatal('172012  应用ID为空')
 
     def send_template_message(self, to, data, temp_id):
         """
         发送模板短信
-        :param to: 短信接收彿手机号码集合,用英文逗号分开
+        :param to: 短信接收手机号码集合,用英文逗号分开
         :param data: 内容数据
         :param temp_id: 模板id
         :return: None
