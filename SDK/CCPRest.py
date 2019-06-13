@@ -163,5 +163,5 @@ class CCP(object):
 
         # 发送post请求
         rsp = requests.post(url=url, headers=headers, data=body.encode('utf-8'))
-        logging.info('短信发送结果')
+        logging.info('短信发送结果: ', rsp)
         return rsp.json()
